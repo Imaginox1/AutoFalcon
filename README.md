@@ -1,5 +1,10 @@
 # AutoFalcon
 Read the README
+
 Extract the File
-Make sure to run 
+
+    The file you should extract should be either:
+      AutoFalcon - Microsoft Edge.exe or
+      AutoFalcon - Google.exe
+  
 Go Falcons
