@@ -26,5 +26,14 @@ Your computer might say it is a virus, it is not, but since I did not buy a dev 
 Your computer will ask you if you are sure it is safe, it is safe to download
 
 You will need go to your browsers downlaod section and select keep, and if it asks for keep again, select keep.
+
+## Opening the Application
+Download the .zip file that corresponds with the browser you choose in either the Python or Javascript releases
+
+When it finishes downloading, you can unzip/extract the file in the downloads folder
+
+The .exe file will be inside of the new folder created, you can move it or place it wherever you wish
+
+You will be able to use the .exe now
  
 # Go Falcons!
