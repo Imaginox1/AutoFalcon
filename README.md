@@ -21,12 +21,6 @@ You do not have to download both broswer types
 ## Downloading the Application
 Click on the name for one of the options and your computer will download it
 
-Your computer might say it is a virus, it is not, but since I did not buy a dev lisence, there it no proof to microsoft or apple that I am making safe applications. 
-
-Your computer will ask you if you are sure it is safe, it is safe to download
-
-You will need go to your browsers downlaod section and select keep, and if it asks for keep again, select keep.
-
 ## Opening the Application
 Download the .zip file that corresponds with the browser you choose in either the Python or Javascript releases
 
@@ -35,5 +29,14 @@ When it finishes downloading, you can unzip/extract the file in the downloads fo
 The .exe file will be inside of the new folder created, you can move it or place it wherever you wish
 
 You will be able to use the .exe now
+
+## Running the Application
+After you open the non-zip file and double click the .exe inside
+
+A windows smartscreen defender window will open asking if you are sure you want to run the program
+
+All you need to do is select the more options in the upper right area and click the run anyway that will show up
+
+After the application will work and you can now use the falconlink automation
  
 # Go Falcons!
