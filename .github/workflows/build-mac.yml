@@ -2,11 +2,11 @@ name: Build Autofalcon for macOS
 
 on:
   push:
-    branches: [ main ]   # runs when you push to main branch
+    branches: [ main ]
 
 jobs:
   build:
-    runs-on: macos-latest   # GitHub gives you a Mac runner
+    runs-on: macos-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -14,16 +14,22 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20   # bump to 20 since selenium-webdriver requires >=20
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build macOS app
+      - name: Build app
         run: npm run dist
 
-      - name: Upload artifact
+      - name: Upload macOS DMG
         uses: actions/upload-artifact@v4
         with:
-          name: Autofalcon-mac
-          path: dist/mac/Autofalcon.dmg
+          name: Autofalcon-dmg
+          path: dist/mac-arm64/*.dmg
+
+      - name: Upload macOS APP
+        uses: actions/upload-artifact@v4
+        with:
+          name: Autofalcon-app
+          path: dist/mac-arm64/*.app
