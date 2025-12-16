@@ -28,10 +28,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Autofalcon-dmg
-          path: dist/mac-arm64/*.dmg
+          path: dist/*.dmg
 
-      - name: Upload macOS APP (zip)
+      - name: Upload macOS ZIP
         uses: actions/upload-artifact@v4
         with:
           name: Autofalcon-zip
-          path: dist/mac-arm64/*.zip
+          path: dist/*.zip
