@@ -33,7 +33,7 @@
       "msedgedriver-x64"
     ],
     "mac": {
-      "target": "dir",
+      "target": ["dmg", "zip"],
       "icon": "falcon.icns"
     }
   }
