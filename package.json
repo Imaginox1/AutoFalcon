@@ -1,0 +1,36 @@
+{
+  "name": "autofalcon-safari",
+  "version": "1.0.0",
+  "description": "Automatic Falconlink Login",
+  "main": "main.js",
+  "author": "Caleb",
+  "license": "ISC",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.12.0"
+  },
+  "devDependencies": {
+    "electron": "^39.2.6",
+    "electron-builder": "^24.6.0"
+  },
+  "build": {
+    "appId": "com.caleb.autofalcon",
+    "productName": "Autofalcon",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "index.html",
+      "styles.css",
+      "Faith long Logo.png",
+      "falcon.icns"
+    ],
+    "mac": {
+      "target": ["dmg", "zip"],
+      "icon": "falcon.icns"
+    }
+  }
+}
