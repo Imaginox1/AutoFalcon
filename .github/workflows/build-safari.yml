@@ -54,8 +54,3 @@ jobs:
         with:
           name: Autofalcon-x64
           path: dist/*.dmg
-  note:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Reminder
-        run: echo "SafariDriver requires enabling once: run 'safaridriver --enable' on each Mac."
