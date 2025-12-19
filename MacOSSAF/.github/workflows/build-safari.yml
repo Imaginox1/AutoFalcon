@@ -1,4 +1,4 @@
-name: Build Autofalcon for macOS (Separate Builds)
+name: Build Autofalcon for macOS (Separate Builds) #
 
 on:
   push:
