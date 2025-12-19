@@ -20,7 +20,7 @@ jobs:
         run: npm install
 
       - name: Build universal macOS app
-        run: npm run dist 
+        run: npm run dist -- --mac dmg --mac zip --arch x64 --arch arm64
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
