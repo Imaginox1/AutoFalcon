@@ -1,0 +1,61 @@
+name: Build Autofalcon for macOS (Separate Builds)
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-arm64:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build macOS app (arm64)
+        run: npm run dist -- --mac dmg zip --arm64
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Upload arm64 artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Autofalcon-arm64
+          path: dist/*.dmg
+
+  build-x64:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build macOS app (x64)
+        run: npm run dist -- --mac dmg zip --x64
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Upload x64 artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Autofalcon-x64
+          path: dist/*.dmg
+  note:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reminder
+        run: echo "SafariDriver requires enabling once: run 'safaridriver --enable' on each Mac."
