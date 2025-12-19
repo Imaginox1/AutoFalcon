@@ -1,5 +1,5 @@
 {
-  "name": "autofalcon-microsoft-edge",
+  "name": "autofalcon-safari",
   "version": "1.0.0",
   "description": "Automatic Falconlink Login",
   "main": "main.js",
@@ -27,10 +27,6 @@
       "styles.css",
       "Faith long Logo.png",
       "falcon.icns"
-    ],
-    "extraResources": [
-      "msedgedriver-arm64",
-      "msedgedriver-x64"
     ],
     "mac": {
       "target": ["dmg", "zip"],

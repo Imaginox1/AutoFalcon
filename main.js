@@ -2,7 +2,6 @@
 const { app, BrowserWindow, screen, ipcMain } = require('electron');
 const path = require('path');
 const { Builder, By, until } = require('selenium-webdriver');
-const edge = require('selenium-webdriver/edge');
 
 function createWindow() {
   const { width, height } = screen.getPrimaryDisplay().workAreaSize;
@@ -58,16 +57,7 @@ ipcMain.handle('perform-login', async (event, { emailLocalPart, password }) => {
 
   let driver;
   try {
-    // Point directly to msedgedriver in app folder
-    const arch = process.arch; // 'arm64' for Apple Silicon, 'x64' for Intel
-    const driverName = arch === 'arm64' ? 'msedgedriver-arm64' : 'msedgedriver-x64';
-    const driverPath = path.join(process.resourcesPath, driverName);
-    const service = new edge.ServiceBuilder(driverPath);
-
-    driver = await new Builder()
-      .forBrowser('MicrosoftEdge')
-      .setEdgeService(service)
-      .build();
+    driver = await new Builder().forBrowser('safari').build();
 
     await driver.get('https://faithkids.myschoolapp.com/app/?fromHash=login#login');
     await driver.manage().window().maximize();
