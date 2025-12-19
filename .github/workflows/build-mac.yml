@@ -19,8 +19,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build app
-        run: npm run dist 
+      - name: Build universal macOS app
+        run: npm run dist -- --mac universal
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
