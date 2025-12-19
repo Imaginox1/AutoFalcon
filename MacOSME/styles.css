@@ -1,0 +1,141 @@
+/* styles.css */
+:root {
+  --bg: #f8f3ed;
+  --card-bg: #ffffff;
+  --logo-bar-bg: #003366;
+  --main-color: #2b4370; /* chosen color */
+  --hover-color: #3a5f8f;
+  --cancel-color: gray;
+  --text-color: #000;
+  --font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* hides scrollbars */
+  font-family: var(--font-family);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+#login-frame {
+  width: 480px;
+  height: 360px;
+  margin: 30px auto; /* 60px 20 */
+  background: var(--card-bg);
+  border-radius: 10px;
+  border: 1px solid #999999;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+#logo-bar {
+  background: var(--logo-bar-bg);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* align left */
+  padding-left: 80px; 
+}
+
+#logo {
+  max-width: 360px;
+  height: auto;
+  transform: translateX(-40px); /* shift 40px left */
+  margin-top: -7.5px;
+}
+
+#inner-frame {
+  padding: 24px 30px 30px 30px;
+}
+
+.label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: var(--text-color);
+}
+
+.text-input {
+  width: 100%;
+  max-width: 560px;
+  height: 42px;
+  padding: 8px 12px;
+  font-size: 15px;
+  border: 2px solid #999999;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.small {
+  width: 150px;
+  height: 36px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+#button-frame {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  max-width: 560px;
+}
+
+.ctk-button {
+  background: var(--cancel-color);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 9px;
+  font-weight: bold;
+  cursor: pointer;
+  min-width: 100px;
+  height: 35px;
+}
+
+.ctk-button:hover {
+  filter: brightness(1.05);
+}
+
+.gradient-button {
+  background: linear-gradient(180deg, #2f4a7a 0%, #1d3152 100%);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 9px;
+  font-weight: bold;
+  cursor: pointer;
+  min-width: 100px;
+  height: 35px;
+  transition: filter 120ms ease;
+}
+
+.gradient-button:hover {
+  filter: brightness(1.08);
+}
+
+.gradient-button:active {
+  filter: brightness(0.9);
+}
+
+#toggle-password {
+  width: auto;          
+  height: 28px;        
+  font-size: 11px;      
+  padding: 4px 8px;       
+  margin-top: 4px;       
+  margin-bottom: 8px;    
+  align-self: flex-start; 
+}
+
+#status-label {
+  margin-top: 8px;
+  color: black;
+  margin-bottom: 12px;
+  min-height: 20px;
+  font-size: 14px;
+  text-align: right;
+}
