@@ -20,7 +20,7 @@ jobs:
         run: npm install
 
       - name: Build macOS app (arm64)
-        run: electron-builder --mac dmg zip --arm64
+        run: npm run dist -- --mac dmg zip --arm64
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
@@ -45,7 +45,7 @@ jobs:
         run: npm install
 
       - name: Build macOS app (x64)
-        run: electron-builder --mac dmg zip --x64
+        run: npm run dist -- --mac dmg zip --x64
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
