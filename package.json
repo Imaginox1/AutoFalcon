@@ -35,9 +35,6 @@
     "mac": {
       "target": ["dmg", "zip"],
       "icon": "falcon.icns"
-    },
-    "x64ArchFiles": [
-      "msedgedriver-x64"
-    ]
+    }
   }
 }
